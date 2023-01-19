@@ -93,7 +93,7 @@ body {
   top: 0;
   left: 0;
   display: grid;
-  place-items: center;
+  place-items: end center;
   background-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -108,6 +108,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  margin-bottom: 30px;
 }
 
 .winner .win {
