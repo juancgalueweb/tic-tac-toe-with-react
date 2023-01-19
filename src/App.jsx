@@ -1,7 +1,7 @@
 import confetti from 'canvas-confetti';
 import { useState } from 'react';
 import { BoardGame } from './components/BoardGame.jsx';
-import { Square } from './components/Square.jsx';
+import { ShowTurns } from './components/ShowTurns.jsx';
 import { WinnerModal } from './components/WinnderModal.jsx';
 import { TURNS } from './constants/constants.js';
 import { checkEndGame, checkWinnerFrom } from './logic/board.js';
@@ -9,7 +9,7 @@ import { checkEndGame, checkWinnerFrom } from './logic/board.js';
 function App() {
   const [board, setBoard] = useState(Array(9).fill(null));
   const [turn, setTurn] = useState(TURNS.X);
-  // null es no hay ganador
+  // null es no hay ganador, false es empate, true es hay ganador
   const [winner, setWinner] = useState(null);
 
   function updateBoard(index) {
@@ -46,11 +46,7 @@ function App() {
       <h1>Tic Tac Toe</h1>
       <button onClick={resetGame}>Comenzar de nuevo</button>
       <BoardGame board={board} updateBoard={updateBoard} />
-
-      <section className='turn'>
-        <Square isSelected={turn === TURNS.X}>{TURNS.X}</Square>
-        <Square isSelected={turn === TURNS.O}>{TURNS.O}</Square>
-      </section>
+      <ShowTurns turn={turn} />
       <WinnerModal winner={winner} resetGame={resetGame} />
     </main>
   );
