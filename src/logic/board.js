@@ -1,4 +1,4 @@
-import { WINNER_POSITIONS } from '../constants/constants';
+import { WINNER_POSITIONS } from '../constants/constants.js';
 
 export function checkWinnerFrom(boardToCheck) {
   //Revisamos todas las combinaciones ganadoras para ver quién ganó

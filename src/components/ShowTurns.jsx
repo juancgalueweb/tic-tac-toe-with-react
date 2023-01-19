@@ -1,4 +1,4 @@
-import { TURNS } from '../constants/constants.jsx';
+import { TURNS } from '../constants/constants.js';
 import { Square } from './Square';
 
 export const ShowTurns = ({ turn }) => {
