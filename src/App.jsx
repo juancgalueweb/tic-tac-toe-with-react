@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { BoardGame } from './components/BoardGame.jsx';
 import { ShowTurns } from './components/ShowTurns.jsx';
 import { WinnerModal } from './components/WinnderModal.jsx';
-import { TURNS } from './constants/constants.js';
+import { TURNS } from './constants/constants.jsx';
 import { checkEndGame, checkWinnerFrom } from './logic/board.js';
 
 function App() {
