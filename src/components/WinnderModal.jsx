@@ -1,8 +1,8 @@
-import { Square } from './Square.jsx';
+import { Square } from './Square.jsx'
 
-export function WinnerModal({ winner, resetGame }) {
-  if (winner === null) return null;
-  const winnerText = winner === false ? 'Empate' : 'Ganó:';
+export function WinnerModal ({ winner, resetGame }) {
+  if (winner === null) return null
+  const winnerText = winner === false ? 'Empate' : 'Ganó:'
   return (
     <section className='winner'>
       <div className='text'>
@@ -15,5 +15,5 @@ export function WinnerModal({ winner, resetGame }) {
         </footer>
       </div>
     </section>
-  );
+  )
 }

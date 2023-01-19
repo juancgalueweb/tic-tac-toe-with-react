@@ -1,4 +1,4 @@
-import { Square } from './Square';
+import { Square } from './Square'
 
 export const BoardGame = ({ board, updateBoard }) => {
   return (
@@ -8,8 +8,8 @@ export const BoardGame = ({ board, updateBoard }) => {
           <Square key={index} index={index} updateBoard={updateBoard}>
             {square}
           </Square>
-        );
+        )
       })}
     </section>
-  );
-};
+  )
+}
