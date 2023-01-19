@@ -1,7 +1,7 @@
 import { WINNER_POSITIONS } from '../constants/constants.js'
 
 export function checkWinnerFrom (boardToCheck) {
-  //Revisamos todas las combinaciones ganadoras para ver quién ganó
+  // Revisamos todas las combinaciones ganadoras para ver quién ganó
   for (const position of WINNER_POSITIONS) {
     const [a, b, c] = position
     if (

@@ -20,18 +20,18 @@ function App () {
   const [winner, setWinner] = useState(null)
 
   function updateBoard (index) {
-    //No actualizamos la posición si previamente tiene un valor, o si hay un ganador
+    // No actualizamos la posición si previamente tiene un valor, o si hay un ganador
     if (board[index] || winner) return
-    //Actualizamos el tablero
+    // Actualizamos el tablero
     const newBoard = [...board]
     newBoard[index] = turn
     setBoard(newBoard)
-    //Cambiamos el turno
+    // Cambiamos el turno
     const newTurn = turn === TURNS.X ? TURNS.O : TURNS.X
     setTurn(newTurn)
-    //Guardar partida
+    // Guardar partida
     saveGameToStorage({ board: newBoard, turn: newTurn })
-    //Revisamos si hay ganador
+    // Revisamos si hay ganador
     const newWinner = checkWinnerFrom(newBoard)
     if (newWinner) {
       confetti({
